@@ -29,16 +29,16 @@ class LCW:
         assert self.wait.until(ec.element_to_be_clickable(self.SUB_CATEGORY_IMG_BOX)).is_displayed(), \
             'This page is not category page'
         self.wait.until(ec.presence_of_all_elements_located(self.SUB_CATEGORY_PAGE))[1].click()
-        assert self.wait.until(ec.element_to_be_clickable(self.PRODUCT_PAGE)).is_displayed(),\
+        assert self.wait.until(ec.element_to_be_clickable(self.PRODUCT_PAGE)).is_displayed(), \
             'This page is not product page'
         self.wait.until(ec.presence_of_all_elements_located(self.PRODUCT_PAGE))[1].click()
-        assert self.wait.until(ec.element_to_be_clickable(self.ADD_TO_CART)).is_displayed(),\
+        assert self.wait.until(ec.element_to_be_clickable(self.ADD_TO_CART)).is_displayed(), \
             'Add to cart button is not displayed! This page is not product page.'
         self.wait.until(ec.presence_of_all_elements_located(self.CHOOSE_SIZE))[0].click()
         self.wait.until(ec.element_to_be_clickable(self.ADD_TO_CART)).click()
         self.wait.until(ec.element_to_be_clickable(self.CART_PAGE)).click()
         assert self.wait.until(ec.element_to_be_clickable(self.PAYMENT_BUTTON)).is_displayed(), \
-                                  'Payment button is mot displayed! this pa is not cart page.'
+            'Payment button is mot displayed! this pa is not cart page.'
         self.wait.until(ec.element_to_be_clickable(self.MAIN_PAGE)).click()
         self.driver.quit()
 
